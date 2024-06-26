@@ -8,7 +8,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
     }, []);
     return (
         <div>
-            <div className="loadMe min-h-screen min-w-full fixed top-0 left-0 z-10 bg-rose-950 " />
+            <div className="loadMe h-screen w-screen fixed top-0 left-0 z-10 bg-rose-950 " />
             {children}
         </div>
     )
