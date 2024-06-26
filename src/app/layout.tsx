@@ -20,9 +20,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="min-h-screen min-w-screen bg-rose-950 bg-opacity-20">
           <Header />
-          <main className="flex min-h-[100%] flex-col items-center justify-between p-24">
-            {children}
-          </main>
+          {children}
         </div>
       </body>
     </html>
