@@ -9,6 +9,8 @@ import Lenis from "lenis";
 
 export default function Template({ children }: { children: React.ReactNode }) {
     useGSAP(() => {
+        gsap.registerPlugin(ScrollTrigger);
+
         const lenis = new Lenis()
 
         lenis.on('scroll', ScrollTrigger.update)
@@ -17,7 +19,6 @@ export default function Template({ children }: { children: React.ReactNode }) {
             lenis.raf(time * 1000)
         })
 
-        gsap.registerPlugin(ScrollTrigger);
         const splitTypes = document.querySelectorAll('.reveal-text');
         // console.log(splitTypes);
 
@@ -37,16 +38,45 @@ export default function Template({ children }: { children: React.ReactNode }) {
                     y: 0,
                     scrollTrigger: {
                         trigger: char,
-                        start: 'top center',
-                        end: '+=5%',
-                        scrub: true,
-                        markers: true,
-                        toggleActions: 'play none none none',
+                        start: '-30% 90%',
+                        end: '-30% 40%',
+                        // scrub: true,
+                        // markers: true,
+                        toggleActions: 'play none none reverse',
                     },
                     stagger: 0.02,
-                    duration: 0.3,
+                    duration: 0.5,
                 })
         })
+    });
+    useGSAP(() => {
+        const images = document.querySelectorAll('.reveal-image');
+        // console.log(images)
+
+        images.forEach((img, i) => {
+            // console.log(img);
+            gsap.fromTo(
+                img,
+                {
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)"
+                },
+                {
+                    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                    ease: "power1.out",
+                    duration: 2,
+                    scrollTrigger: {
+                        trigger: img,
+                        start: "center bottom",
+                        end: "bottom top",
+                        markers: true,
+                        // scrub: true,
+                        toggleActions: "play none none reverse",
+                        // onEnter: () => updateBackground(bgColors[index]),
+                        // onEnterBack: () => updateBackground(bgColors[index]),
+                    },
+                }
+            )
+        });
     });
     useEffect(() => {
         loadPageIn();

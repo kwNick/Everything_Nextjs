@@ -5,9 +5,8 @@ import oranges from "../images/productOY.jpg"
 export default function Home() {
   return (
     <div className="w-full min-h-screen flex flex-col items-center gap-y-10">
-
       <section className="m-4 h-[100vh] w-3/5 flex items-center justify-center">
-        <h1 className='reveal-text'>HomePage!</h1>
+        <h1 className=''>HomePage!</h1>
       </section>
 
       <section className="m-4 h-[100vh] w-3/5 flex items-center gap-x-10">
