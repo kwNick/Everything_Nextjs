@@ -1,23 +1,42 @@
 'use client';
 import { loadPageIn } from "@/anims/gsap";
 import { useGSAP } from "@gsap/react";
-import { useEffect } from "react"
+import { useEffect, useRef } from "react"
 import SplitType from "split-type";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "lenis";
+// import Lenis from "lenis";
+import { ReactLenis, useLenis } from 'lenis/react'
 
 export default function Template({ children }: { children: React.ReactNode }) {
+    const lenisRef: any = useRef() //lenis/react w GSAP integration way
+    // console.log(lenisRef);
+    // --vv-- the lenis/react way --vv--
+    // const lenis = useLenis(({ scroll }) => {
+    //     // called every scroll
+    //     console.log(scroll);
+    // })
+    // console.log(lenis);
     useGSAP(() => {
         gsap.registerPlugin(ScrollTrigger);
 
-        const lenis = new Lenis()
+        //--vv-- Basic Javascript w GSAP integration
+        // const lenis = new Lenis()
+        // lenis.on('scroll', (e: any) => {
+        //     console.log(e)
+        // })
+        // lenis.on('scroll', ScrollTrigger.update)
+        // gsap.ticker.add((time) => {
+        //     lenis.raf(time * 1000)
+        // })
+        // gsap.ticker.lagSmoothing(0)
 
-        lenis.on('scroll', ScrollTrigger.update)
-
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 1000)
-        })
+        // --vv-- lenis/react w GSAP Integration
+        function update(time: any) {
+            lenisRef.current?.lenis?.raf(time * 1000)
+            // console.log(time);
+        }
+        gsap.ticker.add(update)
 
         const splitTypes = document.querySelectorAll('.reveal-text');
         // console.log(splitTypes);
@@ -29,7 +48,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
             gsap.fromTo(text.chars, {
                 // color: bg,
                 scaleY: 0,
-                y: -20,
+                y: -50,
                 transformOrigin: 'top',
             },
                 {
@@ -42,12 +61,17 @@ export default function Template({ children }: { children: React.ReactNode }) {
                         end: '-30% 40%',
                         // scrub: true,
                         // markers: true,
-                        toggleActions: 'play none none reverse',
+                        toggleActions: 'play none none none',
                     },
-                    stagger: 0.02,
-                    duration: 0.5,
+                    stagger: 0.03,
+                    duration: 0.1,
                 })
         })
+
+        // --vv-- lenis/react w GSAP Integration
+        return () => {
+            gsap.ticker.remove(update)
+        }
     });
     useGSAP(() => {
         const images = document.querySelectorAll('.reveal-image');
@@ -68,9 +92,9 @@ export default function Template({ children }: { children: React.ReactNode }) {
                         trigger: img,
                         start: "center bottom",
                         end: "bottom top",
-                        markers: true,
+                        // markers: true,
                         // scrub: true,
-                        toggleActions: "play none none reverse",
+                        toggleActions: "play none none none",
                         // onEnter: () => updateBackground(bgColors[index]),
                         // onEnterBack: () => updateBackground(bgColors[index]),
                     },
@@ -82,9 +106,13 @@ export default function Template({ children }: { children: React.ReactNode }) {
         loadPageIn();
     }, []);
     return (
-        <div>
-            <div className="loadMe h-screen w-screen fixed top-0 left-0 z-10 bg-rose-950 " />
+        // <ReactLenis root>
+        //     <div className="loadMe h-screen w-screen fixed top-0 left-0 z-10 bg-rose-950 " />
+        //     {children}
+        // </ReactLenis>
+        <ReactLenis root ref={lenisRef} autoRaf={false}>
+            <div className="loadMe h-screen w-screen fixed top-0 left-0 z-20 bg-rose-950 " />
             {children}
-        </div>
+        </ReactLenis>
     )
 }
