@@ -28,7 +28,7 @@ const Header = () => {
                 </NavItem>
             </div>
             <div className="p-5 fixed top-0 right-0">
-                <ul className="flex flex-col gap-5 p-3 m-3">
+                <ul className="flex flex-col">
                     {list.map(({ title }: { title: string }) => (
                         <li key={title} className="uppercase tracking-widest font-bold duration-300">
                             <NavItem  >

@@ -1,6 +1,7 @@
 'use client';
 import { loadPageOut } from "@/anims/gsap";
 import { usePathname, useRouter } from "next/navigation";
+import MagneticEffect from "./MagneticEffect";
 
 const NavItem = ({ children }: { children: string }) => {
     const pathname = usePathname();
@@ -16,9 +17,11 @@ const NavItem = ({ children }: { children: string }) => {
     };
 
     return (
-        <button onClick={handleLink}>
-            {children}
-        </button>
+        <MagneticEffect>
+            <button onClick={handleLink} className="px-5 py-3">
+                {children}
+            </button>
+        </MagneticEffect>
     )
 }
 export default NavItem
