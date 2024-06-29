@@ -7,16 +7,16 @@ import { useGSAP } from "@gsap/react";
 const MagneticEffect = ({ children }: { children: React.ReactElement }) => {
     const magneticRef = useRef<HTMLElement | null>(null);
     useGSAP(() => {
-        // const xPos = gsap.quickTo(magneticRef.current, "x", {
-        //     duration: 2.2,
-        //     ease: Expo.easeOut,
-        // });
-        // const yPos = gsap.quickTo(magneticRef.current, "y", {
-        //     duration: 2.2,
-        //     ease: Expo.easeOut
-        // })
-        const xPos = gsap.quickSetter(magneticRef.current, "x", "px");
-        const yPos = gsap.quickSetter(magneticRef.current, "y", "px")
+        const xPos = gsap.quickTo(magneticRef.current, "x", {
+            duration: 2.2,
+            ease: Expo.easeOut,
+        });
+        const yPos = gsap.quickTo(magneticRef.current, "y", {
+            duration: 2.2,
+            ease: Expo.easeOut
+        })
+        // const xPos = gsap.quickSetter(magneticRef.current, "x", "px");
+        // const yPos = gsap.quickSetter(magneticRef.current, "y", "px")
         const mouseMove = (e: MouseEvent) => {
             const { clientX, clientY } = e;
             const { height, width, left, top } = magneticRef.current.getBoundingClientRect();
