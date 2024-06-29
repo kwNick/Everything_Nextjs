@@ -1,13 +1,8 @@
-// 'use client';
 import Image from 'next/image'
 import windows from "../images/windows.jpg"
 import oranges from "../images/productOY.jpg"
-// import { useLenis } from 'lenis/react';
 
 export default function Home() {
-  // const lenis = useLenis(({ scroll }) => {
-  //   // called every scroll
-  // })
   return (
     <div className="w-full min-h-screen flex flex-col items-center gap-y-4">
       <section className="m-4 h-[100vh] w-3/5 flex items-center justify-center">

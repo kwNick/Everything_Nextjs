@@ -11,15 +11,15 @@ import { ReactLenis, useLenis } from 'lenis/react'
 export default function Template({ children }: { children: React.ReactNode }) {
     const lenisRef: any = useRef() //lenis/react w GSAP integration way
     // console.log(lenisRef);
+
     // --vv-- the lenis/react way --vv--
     // const lenis = useLenis(({ scroll }) => {
     //     // called every scroll
     //     console.log(scroll);
     // })
     // console.log(lenis);
-    useGSAP(() => {
-        gsap.registerPlugin(ScrollTrigger);
 
+    useGSAP(() => { //lenis smooth scroll
         //--vv-- Basic Javascript w GSAP integration
         // const lenis = new Lenis()
         // lenis.on('scroll', (e: any) => {
@@ -38,6 +38,14 @@ export default function Template({ children }: { children: React.ReactNode }) {
         }
         gsap.ticker.add(update)
 
+        // --vv-- lenis/react w GSAP Integration
+        return () => {
+            gsap.ticker.remove(update)
+        }
+    });
+
+    useGSAP(() => { //scrollTrigger split text reveal
+        gsap.registerPlugin(ScrollTrigger);
         const splitTypes = document.querySelectorAll('.reveal-text');
         // console.log(splitTypes);
 
@@ -67,13 +75,8 @@ export default function Template({ children }: { children: React.ReactNode }) {
                     duration: 0.1,
                 })
         })
-
-        // --vv-- lenis/react w GSAP Integration
-        return () => {
-            gsap.ticker.remove(update)
-        }
     });
-    useGSAP(() => {
+    useGSAP(() => {     //scrollTrigger image reveal 
         const images = document.querySelectorAll('.reveal-image');
         // console.log(images)
 
