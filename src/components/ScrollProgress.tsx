@@ -11,12 +11,12 @@ const ScrollProgress = () => {
         // called every scroll
         setScrollPos(scroll);
     });
-    console.log(lenis);
-    console.log(window.outerHeight, window.outerWidth);
+    // console.log(lenis);
+    // console.log(window.outerHeight, window.outerWidth);
     useGSAP(() => {
         const progTo = gsap.quickTo(".progress", 'width', { duration: 0.2 });
         const inMax = lenis?.dimensions.scrollHeight;
-        console.log(inMax);
+        // console.log(inMax);
         var mapper = gsap.utils.mapRange(0, inMax, 0, window.innerWidth * .9);
         progTo(mapper(scrollPos));
     }, [scrollPos]);
