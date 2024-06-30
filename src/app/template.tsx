@@ -7,6 +7,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import Lenis from "lenis";
 import { ReactLenis, useLenis } from 'lenis/react'
+import Footer from "@/components/Footer";
 
 export default function Template({ children }: { children: React.ReactNode }) {
     const lenisRef: any = useRef() //lenis/react w GSAP integration way
@@ -116,6 +117,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
         <ReactLenis root ref={lenisRef} autoRaf={false}>
             <div className="loadMe h-screen w-screen fixed top-0 left-0 z-20 bg-rose-950 " />
             {children}
+            <Footer />
         </ReactLenis>
     )
 }

@@ -5,12 +5,6 @@ import oranges from "../images/productOY.jpg"
 export default function Home() {
   return (
     <div className="w-full min-h-screen flex flex-col items-center gap-y-4">
-
-      {
-        //cursor element
-      }
-      <div className="bg-white w-[5vh] h-[5vh] rounded-full fixed top-0 left-0 -translate-x-[50%] -translate-y-[50%]" />
-
       <section className="m-4 h-[80vh] w-3/5 flex items-center justify-center">
         <h1 className='' >HomePage!</h1>
       </section>
