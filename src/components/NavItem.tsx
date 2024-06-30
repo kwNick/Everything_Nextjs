@@ -1,5 +1,5 @@
 'use client';
-import { loadPageOut } from "@/anims/gsap";
+import { cursorEnter, cursorLeave, loadPageOut } from "@/anims/gsap";
 import { usePathname, useRouter } from "next/navigation";
 import MagneticEffect from "./MagneticEffect";
 
@@ -13,12 +13,18 @@ const NavItem = ({ children }: { children: string }) => {
             // console.log(pathname, children.toLowerCase())
             loadPageOut(child, router);
         }
-
     };
+
+    const enterHover = () => {
+        cursorEnter();
+    }
+    const leaveHover = () => {
+        cursorLeave();
+    }
 
     return (
         <MagneticEffect>
-            <button onClick={handleLink} className="px-5 py-3">
+            <button onClick={handleLink} onMouseEnter={enterHover} onMouseLeave={leaveHover} className="px-5 py-3">
                 {children}
             </button>
         </MagneticEffect>
