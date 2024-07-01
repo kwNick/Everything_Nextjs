@@ -51,3 +51,11 @@ export const cursorLeave = () => {
         scale: 1,
     });
 };
+
+export const progressBar = ({ progress }: { progress: number }) => {
+    const progX = gsap.quickSetter(".progress", "width", "%");
+    // console.log(progress * 100);
+    progX(progress * 100);
+
+
+}
