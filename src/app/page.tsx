@@ -2,12 +2,13 @@ import Image from 'next/image'
 import windows from "../images/windows.jpg"
 import oranges from "../images/productOY.jpg"
 import HomeAnimations from '@/components/HomeAnimations';
+import { honk } from '@/fonts/fontsGoogle';
 
 export default function Home() {
   return (
     <div className="w-full min-h-screen flex flex-col items-center gap-y-4">
       <section className="m-4 h-[80vh] w-3/5 flex items-center justify-center">
-        <h1 className='text-4xl uppercase' >HomePage!</h1>
+        <h1 className={`dynamicShadow drop-shadow-2xl shadow-2xl shadow-amber-500 text-9xl uppercase ${honk.className}`} >Home Page!</h1>
       </section>
 
       <HomeAnimations>
