@@ -17,7 +17,7 @@ const Header = () => {
     ];
 
     return (
-        <nav className="p-7 relative z-20 text-rose-950 ">
+        <nav className="w-full h-[20vh] p-7 relative z-20 text-rose-950 ">
             <div className="p-4 m-3 tracking-widest font-bold text-3xl font-serif fixed top-0 left-0">
                 <NavItem logo={true}>
                     Everything!

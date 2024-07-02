@@ -10,7 +10,7 @@ const Cursor = () => {
         let shadowX = gsap.quickSetter(".dynamicShadow", "boxShadow"),
             shadowY = gsap.getProperty(".dynamicShadow", "boxShadow");
         window.addEventListener("mousemove", e => {
-            console.log(e.movementX, e.movementY)
+            // console.log(e.movementX, e.movementY)
             // xTo(Math.round((e.clientX / window.innerWidth) * 100));
             // yTo(Math.round((e.clientY / window.innerHeight) * 100));
             xTo(e.clientX);
