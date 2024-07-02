@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Cursor from "@/components/Cursor";
 import Lenis from "@/components/Lenis";
 import Footer from "@/components/Footer";
+import LandingPage from "@/components/LandingPage";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,12 +23,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Lenis>
-          <div className="min-h-screen min-w-screen bg-rose-950 bg-opacity-20 cursor-none">
-            <Cursor />
-            <Header />
-            {children}
-            <Footer />
-          </div>
+          <LandingPage>
+            <div className="min-h-screen min-w-screen bg-rose-950 bg-opacity-20 cursor-none">
+              <Cursor />
+              <Header />
+              {children}
+              <Footer />
+            </div>
+          </LandingPage>
         </Lenis>
       </body>
     </html >

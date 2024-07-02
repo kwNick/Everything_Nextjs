@@ -8,12 +8,12 @@ export const loadPageIn = () => {
     })
         .to(".loadMe", {
             yPercent: 100,
-            duration: 1.0,
+            duration: 1.5,
         })
         .to(".loadMe", {
             borderTopLeftRadius: "50vw",
             borderTopRightRadius: "50vw",
-            duration: 0.5,
+            duration: 1,
         }, '<');
 };
 
@@ -42,13 +42,16 @@ export const loadPageOut = (href: string, router: AppRouterInstance) => {
 
 export const cursorEnter = () => {
     gsap.to(".cursor", {
-        scale: 2,
+        scale: 2.5,
+        duration: 1.5,
+        ease: 'expo.in',
     });
 };
 
 export const cursorLeave = () => {
     gsap.to(".cursor", {
         scale: 1,
+        duration: 1.5,
     });
 };
 
@@ -56,6 +59,4 @@ export const progressBar = ({ progress }: { progress: number }) => {
     const progX = gsap.quickSetter(".progress", "width", "%");
     // console.log(progress * 100);
     progX(progress * 100);
-
-
 }

@@ -3,7 +3,7 @@ import { cursorEnter, cursorLeave, loadPageOut } from "@/anims/gsap";
 import { usePathname, useRouter } from "next/navigation";
 import MagneticEffect from "./MagneticEffect";
 
-const NavItem = ({ children }: { children: string }) => {
+const NavItem = ({ children, logo = false }: { children: string, logo?: boolean }) => {
     const pathname = usePathname();
     const router = useRouter();
 
@@ -24,7 +24,7 @@ const NavItem = ({ children }: { children: string }) => {
 
     return (
         <MagneticEffect>
-            <button onClick={handleLink} onMouseEnter={enterHover} onMouseLeave={leaveHover} className="px-5 py-3">
+            <button onClick={handleLink} onMouseOver={enterHover} onMouseOut={leaveHover} className={`${logo ? 'landingLogo' : 'landingNavItem'} px-5 py-3`}>
                 {children}
             </button>
         </MagneticEffect>

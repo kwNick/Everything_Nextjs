@@ -8,8 +8,14 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen flex flex-col items-center gap-y-4">
       <section className="m-4 h-[80vh] w-3/5 flex items-center justify-center">
-        <h1 className={`dynamicShadow drop-shadow-2xl shadow-2xl shadow-amber-500 text-9xl uppercase ${honk.className}`} >Home Page!</h1>
+        <h1 className={`landingTitle drop-shadow-2xl shadow-2xl shadow-amber-500 text-9xl uppercase ${honk.className}`} >Home Page!</h1>
       </section>
+
+      <div className='min-w-screen h-[15%] mt-2 mb-2 pt-2 pb-2 overflow-hidden'>
+        <p className='w-[90%] '>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
+        </p>
+      </div>
 
       <HomeAnimations>
         <section className="m-4 h-[60vh] w-3/5 flex items-center gap-x-10 text-3xl tracking-wider font-semibold font-serif">

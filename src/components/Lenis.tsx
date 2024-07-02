@@ -36,7 +36,7 @@ const Lenis = ({ children }: { children: React.ReactNode }) => {
         <ReactLenis root ref={lenisRef} autoRaf={false} options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
             <div className="progress bg-rose-950 bg-opacity-40 w-10 h-[7px] fixed top-0 left-0 z-10" />
             <div className="m-3 fixed top-0 left-[25%] w-[50%] font-bold tracking-widest text-3xl text-rose-950 z-20">
-                <div className="flex justify-center">ScrollProgress: {Math.round(scrollPos)}</div>
+                <div className="landingScroll flex justify-center">ScrollProgress: {Math.round(scrollPos)}</div>
             </div>
             {children}
         </ReactLenis>
