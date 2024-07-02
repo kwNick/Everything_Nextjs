@@ -43,15 +43,16 @@ export const loadPageOut = (href: string, router: AppRouterInstance) => {
 export const cursorEnter = () => {
     gsap.to(".cursor", {
         scale: 2.5,
-        duration: 1.5,
-        ease: 'expo.in',
+        // duration: 1.5,
+        ease: 'power3.in',
     });
 };
 
 export const cursorLeave = () => {
     gsap.to(".cursor", {
         scale: 1,
-        duration: 1.5,
+        // duration: 1.5,
+        ease: 'power3.out'
     });
 };
 

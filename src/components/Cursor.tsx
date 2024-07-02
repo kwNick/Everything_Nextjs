@@ -11,13 +11,15 @@ const Cursor = () => {
             shadowY = gsap.getProperty(".dynamicShadow", "boxShadow");
         window.addEventListener("mousemove", e => {
             console.log(e.movementX, e.movementY)
+            // xTo(Math.round((e.clientX / window.innerWidth) * 100));
+            // yTo(Math.round((e.clientY / window.innerHeight) * 100));
             xTo(e.clientX);
             yTo(e.clientY);
         });
     });
     return (
         <>
-            <div className="cursor bg-white w-[5vh] h-[5vh] rounded-full fixed top-0 left-0 -translate-x-[50%] -translate-y-[50%] mix-blend-screen z-10" >
+            <div className="cursor bg-white w-[3vh] h-[3vh] rounded-full fixed top-0 left-0 -translate-x-[50%] -translate-y-[50%] mix-blend-screen z-10" >
                 <div className=" bg-red-700 absolute w-[20%] h-[20%] top-[15%] left-[45%] rounded-full" />
             </div>
         </>

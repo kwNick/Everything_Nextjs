@@ -31,8 +31,9 @@ const LandingPage = ({ children }: { children: React.ReactNode }) => {
         });
         gsap.from('.cursor', {
             opacity: 0,
-            x: 10,
-            duration: 3,
+            scale: 3,
+            duration: 2,
+            ease: "bounce.in",
         })
     });
     return (
