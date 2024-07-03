@@ -19,11 +19,11 @@ export default function Home() {
             <Image src={streets} alt='streets image for landing page' height={500} width={350} className='imgParallax min-w-full min-h-full' />
           </div>
           <div className='min-h-full w-full bg-slate-700'>
-            <Image src={madara} alt='image image for landing page' height={500} width={350} className='imgParallax min-w-full min-h-full' />
+            <Image src={madara} alt='madara image for landing page' height={500} width={350} className='imgParallax min-w-full min-h-full' />
           </div>
         </div>
 
-        <section className={`relative m-4 h-full w-3/5 flex items-center justify-center`}>
+        <section className={`relative m-4 h-full w-3/5 flex items-center justify-center text-center`}>
           <Image src={blurTown} alt="bg for title hero section" height={500} width={500} className='absolute w-full h-full' />
           <h1 className={`landingTitle drop-shadow-2xl shadow-2xl shadow-amber-500 text-9xl uppercase ${honk.className}`} >Home Page!</h1>
         </section>
@@ -39,20 +39,24 @@ export default function Home() {
 
       </div>
 
-      <div className='w-[90%] h-[15%] mt-2 mb-2 pt-2 pb-2 '>
-        <p className='absolute'>
+      <div className='w-full h-[20%] '>
+        <p className='w-full text-nowrap overflow-hidden bg-slate-700 bg-opacity-30 my-2 text-white uppercase'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
         </p>
       </div>
 
       <TextImageReveal>
         <section className="m-4 h-[60vh] w-3/5 flex items-center gap-x-10 text-3xl tracking-wider font-semibold font-serif">
-          <p className='reveal-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae labore ab culpa, suscipit quaerat molestiae distinctio blanditiis minus similique, repellendus inventore nam possimus perferendis alias!</p>
+          <div>
+            <p className='reveal-text'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae labore ab culpa, suscipit quaerat molestiae distinctio blanditiis minus similique, repellendus inventore nam possimus perferendis alias!</p>
+          </div>
           <Image src={windows} alt={'windows'} width={150} height={250} className='reveal-image w-auto' />
         </section>
 
         <section className="m-4 h-[60vh] w-3/5 flex items-center gap-x-10 text-3xl tracking-wider font-semibold font-serif">
-          <p className='reveal-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur unde aspernatur commodi? Autem ratione sint voluptate accusantium animi illo, odit suscipit modi aut minus facere rerum voluptates at velit voluptas enim eos nam in? Culpa.</p>
+          <div>
+            <p className='reveal-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur unde aspernatur commodi? Autem ratione sint voluptate accusantium animi illo, odit suscipit modi aut minus facere rerum voluptates at velit voluptas enim eos nam in? Culpa.</p>
+          </div>
           <Image src={oranges} alt={'fruit'} width={150} height={250} className='reveal-image w-auto' />
         </section>
 
