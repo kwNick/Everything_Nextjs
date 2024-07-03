@@ -1,6 +1,7 @@
 'use client';
 // import { loadPageIn } from "@/anims/gsap";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const PageTrans = ({ children }: { children: React.ReactNode }) => {
     useGSAP(() => {

@@ -2,7 +2,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from 'gsap';
 
-const LandingPage = ({ children }: { children: React.ReactNode }) => {
+const LandingHeader = ({ children }: { children: React.ReactNode }) => {
 
     useGSAP(() => {
         gsap.from('.landingNavItem', {   //maybe put each one of these in its own wrapper function and wrap the component with it so no more wrapper in layoutpage
@@ -47,4 +47,4 @@ const LandingPage = ({ children }: { children: React.ReactNode }) => {
         </>
     )
 }
-export default LandingPage
+export default LandingHeader

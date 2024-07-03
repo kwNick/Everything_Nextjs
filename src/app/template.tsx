@@ -1,6 +1,6 @@
-import LandingPage from "@/components/LandingPage";
 import PageTrans from "@/components/PageTrans";
 import Lenis from "@/components/Lenis";
+import LandingHeader from "@/components/LandingHeader";
 
 export default function Template({ children }: { children: React.ReactNode }) {
 
@@ -8,10 +8,10 @@ export default function Template({ children }: { children: React.ReactNode }) {
         <>
             <Lenis>
                 <PageTrans>
-                    <LandingPage>
+                    <LandingHeader>
                         {children}
                         <div className="loadMe h-screen w-screen fixed top-0 left-0 z-20 bg-rose-950 " />
-                    </LandingPage>
+                    </LandingHeader>
                 </PageTrans>
             </Lenis>
         </>

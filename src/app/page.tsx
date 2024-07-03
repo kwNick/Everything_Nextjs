@@ -9,44 +9,47 @@ import blurTown from '../images/blur-town.jpg';
 import TextImageReveal from '@/components/TextImageReveal';
 import { honk } from '@/fonts/fontsGoogle';
 import LandingTitle from '@/components/LandingTitle';
+import LandingHero from '@/components/LandingHero';
 
 export default function Home() {
   return (
     <div className="w-full min-h-screen flex flex-col items-center gap-y-4">
 
-      <div className='hero flex w-full h-[80vh]'>
-        <div className='h-full w-1/5 flex flex-col items-center justify-around overflow-hidden'>
-          <div className='min-h-full w-full bg-slate-700'>
-            <Image src={streets} alt='streets image for landing page' height={500} width={350} className='imgParallax min-w-full min-h-full' />
-          </div>
-          <div className='min-h-full w-full bg-slate-700'>
-            <Image src={madara} alt='madara image for landing page' height={500} width={350} className='imgParallax min-w-full min-h-full' />
-          </div>
-        </div>
+      <div className='flex w-full h-[80vh]'>
+        <LandingHero>
+          <section className='h-full w-1/5 flex flex-col items-center justify-around overflow-hidden'>
+            <div className='min-h-full w-full bg-slate-700'>
+              <Image src={streets} alt='streets image for landing page' height={500} width={350} className='left imgParallax min-w-full min-h-full' />
+            </div>
+            <div className='min-h-full w-full bg-slate-700'>
+              <Image src={madara} alt='madara image for landing page' height={500} width={350} className='left imgParallax min-w-full min-h-full' />
+            </div>
+          </section>
 
-        <section className={`relative m-4 h-full w-3/5 flex items-center justify-center text-center`}>
-          <Image src={blurTown} alt="bg for title hero section" height={500} width={500} className='absolute w-full h-full' priority />
-          <LandingTitle>
-            <h1 className={`drop-shadow-2xl shadow-2xl shadow-amber-500 text-9xl uppercase ${honk.className}`} >Home Page!</h1>
-          </LandingTitle>
-        </section>
+          <section className={`relative m-4 h-full w-3/5 flex items-center justify-center text-center`}>
+            <Image src={blurTown} alt="bg for title hero section" height={500} width={500} className='mainImg absolute w-full h-full' priority />
+            <LandingTitle>
+              <h1 className={`drop-shadow-2xl shadow-2xl shadow-amber-500 text-9xl uppercase ${honk.className}`} >Home Page!</h1>
+            </LandingTitle>
+          </section>
 
-        <div className='h-full w-1/5 flex flex-col items-center justify-around overflow-hidden'>
-          <div className='min-h-full w-full bg-slate-700'>
-            <Image src={beach} alt='beach image for landing page' height={500} width={350} className='imgParallax min-w-full min-h-full ' />
-          </div>
-          <div className='min-h-full w-full bg-slate-700'>
-            <Image src={retro} alt='retro image for landing page' height={500} width={350} className='imgParallax min-w-full min-h-full ' />
-          </div>
-        </div>
+          <section className='h-full w-1/5 flex flex-col items-center justify-around overflow-hidden'>
+            <div className='min-h-full w-full bg-slate-700'>
+              <Image src={beach} alt='beach image for landing page' height={500} width={350} className='right imgParallax min-w-full min-h-full ' />
+            </div>
+            <div className='min-h-full w-full bg-slate-700'>
+              <Image src={retro} alt='retro image for landing page' height={500} width={350} className='right imgParallax min-w-full min-h-full ' />
+            </div>
+          </section>
+        </LandingHero>
 
       </div>
 
-      <div className='w-full h-[20%] '>
+      <section className='w-full h-[20%] '>
         <p className='w-full text-nowrap overflow-hidden bg-slate-700 bg-opacity-30 my-2 text-white uppercase'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
         </p>
-      </div>
+      </section>
 
       <TextImageReveal>
         <section className="m-4 h-[60vh] w-3/5 flex items-center gap-x-10 text-3xl tracking-wider font-semibold font-serif">
