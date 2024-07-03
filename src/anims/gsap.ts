@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
-export const loadPageIn = () => {
+export const loadPageIn = () => {   //Are these context safe
     const tl = gsap.timeline();
     tl.set(".loadMe", {
         yPercent: 0,

@@ -33,6 +33,7 @@ const TextImageReveal = ({ children }: { children: React.ReactNode }) => {
                         // markers: true,
                         toggleActions: 'play none none none',
                     },
+                    ease: "power1.in",
                     stagger: 0.03,
                     duration: 0.1,
                 })

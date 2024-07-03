@@ -8,6 +8,7 @@ import retro from '../images/retro.jpg';
 import blurTown from '../images/blur-town.jpg';
 import TextImageReveal from '@/components/TextImageReveal';
 import { honk } from '@/fonts/fontsGoogle';
+import LandingTitle from '@/components/LandingTitle';
 
 export default function Home() {
   return (
@@ -25,7 +26,9 @@ export default function Home() {
 
         <section className={`relative m-4 h-full w-3/5 flex items-center justify-center text-center`}>
           <Image src={blurTown} alt="bg for title hero section" height={500} width={500} className='absolute w-full h-full' priority />
-          <h1 className={`landingTitle drop-shadow-2xl shadow-2xl shadow-amber-500 text-9xl uppercase ${honk.className}`} >Home Page!</h1>
+          <LandingTitle>
+            <h1 className={`drop-shadow-2xl shadow-2xl shadow-amber-500 text-9xl uppercase ${honk.className}`} >Home Page!</h1>
+          </LandingTitle>
         </section>
 
         <div className='h-full w-1/5 flex flex-col items-center justify-around overflow-hidden'>
