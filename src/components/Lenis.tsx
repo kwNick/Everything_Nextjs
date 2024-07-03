@@ -3,7 +3,7 @@ import { useGSAP } from '@gsap/react';
 import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import { useRef, useState } from 'react';
 import gsap from 'gsap';
-import { progressBar } from '@/anims/gsap';
+// import { progressBar } from '@/anims/gsap';
 import LandingScroll from './LandingScroll';
 import Cursor from './Cursor';
 
@@ -16,7 +16,10 @@ const Lenis = ({ children }: { children: React.ReactNode }) => {
         // called every scroll
         // console.log(scroll);
         // console.log(progress);
-        progressBar({ progress });
+        // progressBar({ progress });
+        const progX = gsap.quickSetter(".progress", "width", "%");
+        // console.log(progress * 100);
+        progX(progress * 100);
         setScrollPos(progress * 100);
     })
 
