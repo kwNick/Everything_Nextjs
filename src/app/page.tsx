@@ -24,7 +24,7 @@ export default function Home() {
         </div>
 
         <section className={`relative m-4 h-full w-3/5 flex items-center justify-center text-center`}>
-          <Image src={blurTown} alt="bg for title hero section" height={500} width={500} className='absolute w-full h-full' />
+          <Image src={blurTown} alt="bg for title hero section" height={500} width={500} className='absolute w-full h-full' priority />
           <h1 className={`landingTitle drop-shadow-2xl shadow-2xl shadow-amber-500 text-9xl uppercase ${honk.className}`} >Home Page!</h1>
         </section>
 

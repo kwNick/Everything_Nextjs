@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
-import Cursor from "@/components/Cursor";
-import Lenis from "@/components/Lenis";
+
 import Footer from "@/components/Footer";
 import LandingPage from "@/components/LandingPage";
 
@@ -22,16 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Lenis>
-          <LandingPage>
-            <div className="min-h-screen min-w-screen bg-rose-950 bg-opacity-20 cursor-none">
-              <Cursor />
-              <Header />
-              {children}
-              <Footer />
-            </div>
-          </LandingPage>
-        </Lenis>
+        <div className="min-h-screen min-w-screen bg-rose-950 bg-opacity-20 cursor-none">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html >
   );

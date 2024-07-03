@@ -3,12 +3,22 @@ import { useGSAP } from "@gsap/react";
 import gsap from 'gsap';
 
 const Cursor = () => {
-    useGSAP(() => {
+    useGSAP(() => { //cursor animations
+
+        //Page Load Animation
+        gsap.from('.cursor', {   //maybe put each one of these in its own wrapper function and wrap the component with it so no more wrapper in layoutpage
+            opacity: 0,
+            scale: 3,
+            duration: 2,
+            ease: "power1.inOut",
+        })
+
+        //Mouse Follower Animation
         let xTo = gsap.quickTo(".cursor", "x", { duration: 0.4, ease: "power3" }),
             yTo = gsap.quickTo(".cursor", "y", { duration: 0.4, ease: "power3" });
 
-        let shadowX = gsap.quickSetter(".dynamicShadow", "boxShadow"),
-            shadowY = gsap.getProperty(".dynamicShadow", "boxShadow");
+        // let shadowX = gsap.quickSetter(".dynamicShadow", "boxShadow"),
+        //     shadowY = gsap.getProperty(".dynamicShadow", "boxShadow");
         window.addEventListener("mousemove", e => {
             // console.log(e.movementX, e.movementY)
             // xTo(Math.round((e.clientX / window.innerWidth) * 100));

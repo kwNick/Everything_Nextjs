@@ -4,13 +4,15 @@ import { ReactLenis, useLenis } from '@studio-freight/react-lenis'
 import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import { progressBar } from '@/anims/gsap';
+import LandingScroll from './LandingScroll';
+import Cursor from './Cursor';
 
 const Lenis = ({ children }: { children: React.ReactNode }) => {
     const [scrollPos, setScrollPos] = useState(0);
     const lenisRef: any = useRef()
     // console.log(lenisRef);
 
-    const lenis = useLenis(({ scroll, progress }) => {
+    const lenis = useLenis(({ scroll, progress }) => { //Scroll Animations
         // called every scroll
         // console.log(scroll);
         // console.log(progress);
@@ -18,7 +20,8 @@ const Lenis = ({ children }: { children: React.ReactNode }) => {
         setScrollPos(progress * 100);
     })
 
-    useGSAP(() => { //lenis smooth scroll
+    useGSAP(() => {
+        //Lenis Smooth Scroll
         // --vv-- lenis/react w GSAP Integration
         function update(time: any) {
             lenisRef.current?.lenis?.raf(time * 1000)
@@ -34,9 +37,12 @@ const Lenis = ({ children }: { children: React.ReactNode }) => {
 
     return (
         <ReactLenis root ref={lenisRef} autoRaf={false} options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
+            <Cursor />
             <div className="progress bg-rose-950 bg-opacity-40 w-10 h-[7px] fixed top-0 left-0 z-10" />
             <div className="m-3 fixed top-0 left-[25%] w-[50%] font-bold tracking-widest text-3xl text-rose-950 z-20">
-                <div className="landingScroll flex justify-center rounded-md">ScrollProgress: {Math.round(scrollPos)}</div>
+                <LandingScroll>
+                    <div className="landingScroll flex justify-center rounded-md">ScrollProgress: {Math.round(scrollPos)}</div>
+                </LandingScroll>
             </div>
             {children}
         </ReactLenis>
