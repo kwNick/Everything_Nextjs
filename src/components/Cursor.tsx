@@ -13,8 +13,8 @@ const Cursor = () => {
         })
 
         //Mouse Follower Animation
-        let xTo = gsap.quickTo(".cursor", "x", { duration: 0.4, ease: "power3" }),
-            yTo = gsap.quickTo(".cursor", "y", { duration: 0.4, ease: "power3" });
+        let xTo = gsap.quickTo(".cursor", "x", { duration: 0.2, ease: "power3" }),
+            yTo = gsap.quickTo(".cursor", "y", { duration: 0.2, ease: "power3" });
 
         // let shadowX = gsap.quickSetter(".dynamicShadow", "boxShadow"),
         //     shadowY = gsap.getProperty(".dynamicShadow", "boxShadow");
