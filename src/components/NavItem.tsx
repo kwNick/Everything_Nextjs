@@ -24,7 +24,7 @@ const NavItem = ({ children, logo = false }: { children: string, logo?: boolean 
 
     return (
         <MagneticEffect>
-            <button onClick={handleLink} onMouseOver={enterHover} onMouseOut={leaveHover} className={`${logo ? 'landingLogo' : 'landingNavItem'} px-5 py-3`}>
+            <button onClick={handleLink} onMouseOver={enterHover} onMouseOut={leaveHover} className={`${logo ? 'landingLogo' : 'landingNavItem'} px-4 py-2 shadow-md rounded-md`}>
                 {children}
             </button>
         </MagneticEffect>

@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 
-const HomeAnimations = ({ children }: { children: React.ReactNode }) => {
+const TextImageReveal = ({ children }: { children: React.ReactNode }) => {
 
     useGSAP(() => { //scrollTrigger split text reveal
         gsap.registerPlugin(ScrollTrigger);
@@ -73,4 +73,4 @@ const HomeAnimations = ({ children }: { children: React.ReactNode }) => {
         </>
     )
 }
-export default HomeAnimations
+export default TextImageReveal
