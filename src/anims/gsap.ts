@@ -60,7 +60,7 @@ export const cursorLeave = () => {
     });
 };
 
-// export const progressBar = ({ progress }: { progress: number }) => {   //Is this context safe //moved to component and called w/ useGSAP
+// export const progressBarX = ({ progress }: { progress: number }) => {   //Is this context safe //moved to component and called w/ useGSAP
 //     const progX = gsap.quickSetter(".progress", "width", "%");
 //     // console.log(progress * 100);
 //     progX(progress * 100);

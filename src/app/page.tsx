@@ -18,10 +18,10 @@ export default function Home() {
       <div className='flex w-full h-[80vh]'>
         <LandingHero>
           <section className='h-full w-1/5 flex flex-col items-center justify-around overflow-hidden'>
-            <div className='min-h-full w-full bg-slate-700'>
+            <div className='min-h-full w-full '>
               <Image src={streets} alt='streets image for landing page' height={500} width={350} className='left imgParallax min-w-full min-h-full' />
             </div>
-            <div className='min-h-full w-full bg-slate-700'>
+            <div className='min-h-full w-full '>
               <Image src={madara} alt='madara image for landing page' height={500} width={350} className='left imgParallax min-w-full min-h-full' />
             </div>
           </section>
@@ -34,10 +34,10 @@ export default function Home() {
           </section>
 
           <section className='h-full w-1/5 flex flex-col items-center justify-around overflow-hidden'>
-            <div className='min-h-full w-full bg-slate-700'>
+            <div className='min-h-full w-full '>
               <Image src={beach} alt='beach image for landing page' height={500} width={350} className='right imgParallax min-w-full min-h-full ' />
             </div>
-            <div className='min-h-full w-full bg-slate-700'>
+            <div className='min-h-full w-full '>
               <Image src={retro} alt='retro image for landing page' height={500} width={350} className='right imgParallax min-w-full min-h-full ' />
             </div>
           </section>
@@ -45,8 +45,11 @@ export default function Home() {
 
       </div>
 
-      <section className='w-full h-[20%] '>
-        <p className='w-full text-nowrap overflow-hidden bg-slate-700 bg-opacity-30 my-2 text-white uppercase'>
+      <section className='relative w-full h-[20%] text-nowrap overflow-hidden bg-slate-700 bg-opacity-30 my-2'>
+        <p className='textParallax w-full text-white uppercase absolute -translate-x-[130%]'>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
+        </p>
+        <p className='textParallax w-full text-white uppercase'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
         </p>
       </section>

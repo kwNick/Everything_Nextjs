@@ -10,17 +10,16 @@ const NavItem = ({ children, logo = false }: { children: string, logo?: boolean 
     const router = useRouter();
 
     const child = (children == "Everything!" ? "/" : children.toLowerCase())
-    const handleLink = contextSafe(() => {  //Maybe need to context safe these functions
+    const handleLink = contextSafe(() => {
         if (pathname !== child) {
-            // console.log(pathname, children.toLowerCase())
             loadPageOut(child, router);
         }
     });
 
-    const enterHover = contextSafe(() => {  //Maybe need to context safe these functions
+    const enterHover = contextSafe(() => {
         cursorEnter();
     });
-    const leaveHover = contextSafe(() => {  //Maybe need to context safe these functions
+    const leaveHover = contextSafe(() => {
         cursorLeave();
     });
 
