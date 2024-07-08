@@ -55,7 +55,7 @@ export default function Home() {
 
       <div className='min-h-[25vh]' />
 
-      <section className='relative min-w-full h-[20%] text-nowrap overflow-hidden bg-slate-700 bg-opacity-30 my-10'>
+      <section className='relative w-full h-[20%] text-nowrap overflow-hidden bg-slate-700 bg-opacity-30 my-10'>
         <TextParallax>
           <div className='flex'>
             <p className='textTop w-full text-white uppercase '>
@@ -74,7 +74,7 @@ export default function Home() {
             </p>
           </div>
           <div className='flex'>
-            <p className='textBottom w-full text-white uppercase'>
+            <p className='textBottom w-full text-white uppercase '>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
             </p>
             <p className='textBottom w-full text-white uppercase'>

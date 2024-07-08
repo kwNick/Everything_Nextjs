@@ -19,24 +19,29 @@ const TextParallax = ({ children }: { children: React.ReactNode }) => {
     });
     // console.log(lenis);
 
-    const animation = () => {
-        // let xPercent = gsap.
-        if (xPercent <= -100) {
-            xPercent = 0;
-        }
 
-        if (xPercent > 0) {
-            xPercent = -100
-        }
-
-        gsap.set(".textMiddle", { xPercent: xPercent });
-        xPercent += 0.1;
-        requestAnimationFrame(animation);
-    }
     useGSAP(() => {
         // const textSlide = gsap.quickTo(".textMiddle", "xPercent", { duration: 0.2, ease: "power1" });
-        // gsap.ticker.add();
-        requestAnimationFrame(animation)
+
+        const animation = () => {
+            // let xPercent = gsap.
+            if (xPercent <= -100) {
+                xPercent = 0;
+            }
+
+            if (xPercent > 0) {
+                xPercent = -100
+            }
+
+            gsap.set(".textMiddle", { xPercent: xPercent });
+            xPercent += 0.1;
+            // requestAnimationFrame(animation);
+        }
+        gsap.ticker.add(animation);
+        // requestAnimationFrame(animation)
+        return () => {
+            gsap.ticker.remove(animation);
+        }
     });
     return (
         <>
