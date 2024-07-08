@@ -65,9 +65,9 @@ export default function Home() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
             </p>
           </div>
-          <div className='translate-x-[50%]'>
-            <p className='textMiddle w-full text-white uppercase absolute '>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
+          <div className=''>
+            <p className='textMiddle w-full text-white uppercase absolute -translate-x-[130%]'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus? ---hellio
             </p>
             <p className='textMiddle w-full text-white uppercase'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
