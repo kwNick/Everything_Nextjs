@@ -16,6 +16,10 @@ const TextParallax = ({ children }: { children: React.ReactNode }) => {
 
         const textBottom = gsap.quickTo(".textBottom", "xPercent", { duration: 0.2, ease: "power3" });  //move this to its own wrapper in page.tsx
         textBottom(progress * 100 * 1.1);
+
+        const color = gsap.utils.interpolate(["red", "orange", "yellow", "green", "blue", "indigo", "violet"], progress);
+        const textBottomColor = gsap.quickSetter(".textBottom", "color",);
+        textBottomColor(color);
     });
     // console.log(lenis);
 
@@ -33,9 +37,13 @@ const TextParallax = ({ children }: { children: React.ReactNode }) => {
                 xPercent = -100
             }
 
-            gsap.set(".textMiddle", { xPercent: xPercent });
+            gsap.set(".textMiddle", { xPercent: xPercent, });
             xPercent += 0.1;
+            // console.log(xPercent);
             // requestAnimationFrame(animation);
+
+            let color = gsap.utils.interpolate(["red", "orange", "yellow", "green", "blue", "indigo", "violet"], gsap.utils.normalize(0, 1, Math.abs(xPercent) / 100));
+            gsap.set(".textMiddle", { color: color });
         }
         gsap.ticker.add(animation);
         // requestAnimationFrame(animation)
