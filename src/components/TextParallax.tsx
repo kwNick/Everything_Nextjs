@@ -24,15 +24,17 @@ const TextParallax = ({ children }: { children: React.ReactNode }) => {
         if (xPercent <= -100) {
             xPercent = 0;
         }
+
         if (xPercent > 0) {
             xPercent = -100
         }
+
         gsap.set(".textMiddle", { xPercent: xPercent });
         xPercent += 0.1;
         requestAnimationFrame(animation);
     }
     useGSAP(() => {
-        const textSlide = gsap.quickTo(".textMiddle", "xPercent", { duration: 0.2, ease: "power1" });
+        // const textSlide = gsap.quickTo(".textMiddle", "xPercent", { duration: 0.2, ease: "power1" });
         // gsap.ticker.add();
         requestAnimationFrame(animation)
     });

@@ -55,26 +55,26 @@ export default function Home() {
 
       <div className='min-h-[25vh]' />
 
-      <section className='relative w-full h-[20%] text-nowrap overflow-hidden bg-slate-700 bg-opacity-30 my-10'>
+      <section className='relative min-w-full h-[20%] text-nowrap overflow-hidden bg-slate-700 bg-opacity-30 my-10'>
         <TextParallax>
-          <div>
-            <p className='textTop w-full text-white uppercase absolute -translate-x-[130%]'>
+          <div className='flex'>
+            <p className='textTop w-full text-white uppercase '>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
             </p>
             <p className='textTop w-full text-white uppercase'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
             </p>
           </div>
-          <div className=''>
-            <p className='textMiddle w-full text-white uppercase absolute -translate-x-[130%]'>
+          <div className='flex'>
+            <p className='textMiddle w-full text-white uppercase pr-[50px] '>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus? ---hellio
             </p>
-            <p className='textMiddle w-full text-white uppercase'>
+            <p className='textMiddle w-full text-white uppercase pr-[50px] '>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
             </p>
           </div>
-          <div>
-            <p className='textBottom w-full text-white uppercase absolute -translate-x-[130%]'>
+          <div className='flex'>
+            <p className='textBottom w-full text-white uppercase'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
             </p>
             <p className='textBottom w-full text-white uppercase'>
