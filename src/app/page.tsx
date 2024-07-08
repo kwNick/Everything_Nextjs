@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen flex flex-col items-center gap-y-4">
 
-      <div className='min-h-[15vh]' />
+      <div className='min-h-[10vh]' />
 
       <div className='flex w-full h-[80vh] rounded-md bg-rose-950 py-8'>
         <LandingHero>
@@ -65,8 +65,8 @@ export default function Home() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
             </p>
           </div>
-          <div>
-            <p className='textMiddle w-full text-white uppercase absolute -translate-x-[130%]'>
+          <div className='translate-x-[50%]'>
+            <p className='textMiddle w-full text-white uppercase absolute '>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dignissimos repudiandae, ipsa iure blanditiis, magnam, quis tenetur id perspiciatis voluptates totam cum in? Fugit alias rerum minus aspernatur rem consequatur aliquid neque vel doloremque possimus?
             </p>
             <p className='textMiddle w-full text-white uppercase'>
