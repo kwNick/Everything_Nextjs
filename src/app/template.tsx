@@ -2,6 +2,7 @@ import PageTrans from "@/components/PageTrans";
 import Lenis from "@/components/Lenis";
 import LandingHeader from "@/components/LandingHeader";
 
+
 export default function Template({ children }: { children: React.ReactNode }) {
 
     return (

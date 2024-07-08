@@ -16,15 +16,10 @@ const Lenis = ({ children }: { children: React.ReactNode }) => {
         const progX = gsap.quickSetter(".progress", "width", "%");
         progX(progress * 100);
 
-        const imgParallax = gsap.quickTo(".imgParallax", "yPercent", { duration: 0.2, ease: "power3" });
-        imgParallax(-progress * 100 * 1.5);
-
-        const textParallax = gsap.quickTo(".textParallax", "xPercent", { duration: 0.2, ease: "power3" });
-        textParallax(progress * 100 * 1.5);
-
         setScrollPos(progress * 100);
     })
-    console.log(lenis);
+    // console.log(lenis);
+
     useGSAP(() => {
         //Lenis Smooth Scroll
         // --vv-- lenis/react w GSAP Integration
