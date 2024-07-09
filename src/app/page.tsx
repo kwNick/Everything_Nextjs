@@ -24,10 +24,10 @@ export default function Home() {
           <ImageParallax>
             <section className='h-full w-1/5 flex flex-col items-center justify-around overflow-hidden '>
               <div className='min-h-full w-full '>
-                <Image src={streets} alt='streets image for landing page' height={500} width={350} className='left imgUp min-w-full min-h-full ' />
+                <Image src={streets} alt='streets image for landing page' height={500} width={350} className='left imgUp min-w-full min-h-full object-cover' />
               </div>
               <div className='min-h-full w-full '>
-                <Image src={madara} alt='madara image for landing page' height={500} width={350} className='left imgUp min-w-full min-h-full ' />
+                <Image src={madara} alt='madara image for landing page' height={500} width={350} className='left imgUp min-w-full min-h-full object-cover' />
               </div>
             </section>
           </ImageParallax>
@@ -42,10 +42,10 @@ export default function Home() {
           <ImageParallax>
             <section className='h-full w-1/5 flex flex-col items-center justify-around overflow-hidden'>
               <div className='min-h-full w-full '>
-                <Image src={beach} alt='beach image for landing page' height={500} width={350} className='right imgUp min-w-full min-h-full ' />
+                <Image src={beach} alt='beach image for landing page' height={500} width={350} className='right imgUp min-w-full min-h-full object-cover' />
               </div>
               <div className='min-h-full w-full '>
-                <Image src={retro} alt='retro image for landing page' height={500} width={350} className='right imgUp min-w-full min-h-full ' />
+                <Image src={retro} alt='retro image for landing page' height={500} width={350} className='right imgUp min-w-full min-h-full object-cover' />
               </div>
             </section>
           </ImageParallax>
