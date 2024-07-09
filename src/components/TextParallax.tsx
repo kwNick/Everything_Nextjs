@@ -38,7 +38,7 @@ const TextParallax = ({ children }: { children: React.ReactNode }) => {
             }
 
             gsap.set(".textMiddle", { xPercent: xPercent, });
-            xPercent += 0.1;
+            xPercent += 0.25;
             // console.log(xPercent);
             // requestAnimationFrame(animation);
 

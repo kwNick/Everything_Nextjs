@@ -5,6 +5,7 @@ import { useRef, useState } from 'react';
 import gsap from 'gsap';
 import LandingScroll from './LandingScroll';
 import Cursor from './Cursor';
+import ProgressAnimation from './ProgressAnimation';
 
 const Lenis = ({ children }: { children: React.ReactNode }) => {
     const [scrollPos, setScrollPos] = useState(0);
@@ -38,7 +39,9 @@ const Lenis = ({ children }: { children: React.ReactNode }) => {
     return (
         <ReactLenis root ref={lenisRef} autoRaf={false} options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
             <Cursor />
-            <div className="progress bg-rose-950 bg-opacity-40 w-10 h-[7px] fixed top-0 left-0 z-10" />
+            {/* <ProgressAnimation> */}
+            <div className="progress bg-rose-950 bg-opacity-40 w-full h-[7px] fixed top-0 left-0 z-10" />
+            {/* </ProgressAnimation> */}
             <div className="m-3 fixed top-0 left-[25%] w-[50%] font-bold tracking-widest text-3xl text-rose-950 z-20">
                 <LandingScroll>
                     <div className="landingScroll flex justify-center rounded-md">ScrollProgress: {Math.round(scrollPos)}</div>
